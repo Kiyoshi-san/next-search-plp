@@ -76,7 +76,7 @@ function HomePage(props) {
                 </div>
             ) : error ? (
                 <MessageBox variant="danger">{error}</MessageBox>
-            ) : products.length ? (
+            ) : products?.length ? (
                 <div className={classes.productListPage}>
                     <div
                         className={`${classes.categoryMenu} ${
