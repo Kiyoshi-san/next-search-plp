@@ -1,0 +1,20 @@
+@import "../../styles/foundation.scss";
+
+.alert {
+  position: relative;
+  padding: 0 0 rem-calc(16);
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+  top: 0;
+  &Info {
+    color: #2020a0;
+  }
+  &Danger {
+    color: #a02020;
+    border-radius: 0.5rem;
+  }
+  &Success {
+    color: #20a020;
+    border-radius: 0.5rem;
+  }
+}

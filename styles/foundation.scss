@@ -1,0 +1,21 @@
+@function rem-calc($size) {
+	$rem-size: $size/16;
+	@return $rem-size * 1rem;
+}
+
+$foundation-palette: (
+  primary: #fff159,
+  secondary: #3483fa,
+  light: #ffffff,
+  cardBg: #f8f8f8,
+  cardBorder: #c0c0c0,
+  darkGrey: #909090,
+  dark: #333333,
+  red: #FF0000
+);
+
+$breakpoints: (
+  small: 600px,
+  medium: 960px,
+  large: 1280px
+);

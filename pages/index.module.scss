@@ -1,0 +1,59 @@
+@import "../styles/foundation.scss";
+
+.productListPage {
+    display: flex;
+    justify-content: center;
+    .categoryMenu {
+        border-right: solid 1px map-get($foundation-palette, darkGrey);
+        margin-right: rem-calc(50);
+        background: map-get($foundation-palette, light);
+        width: 30%;
+        .categoryItem {
+            margin-bottom: rem-calc(10);
+            span {
+                font-size: rem-calc(16);
+                text-decoration: none;
+                color: map-get($foundation-palette, cardBorder);
+                cursor: pointer;
+                transition: all 0.3s;
+                &:hover {
+                    font-size: rem-calc(18);
+                    transform: translateX(rem-calc(10));
+                }
+            }
+        }
+    }
+    .gridContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 65%;
+        h1 {
+            display: block;
+            width: 100%;
+        }
+    }
+    @media(max-width: map-get($breakpoints, medium)) {
+        display: block;
+        .gridContainer {
+            margin: 0 auto;
+        }
+        .categoryMenu {
+            position: absolute;
+            width: 50%;
+            top: rem-calc(80);
+            left: 0;
+            padding: rem-calc(30);
+            transform: translateX(-100%);
+            transition: all 0.3s;
+            &.showMenu {
+                transform: translateX(0);
+            }
+        }
+    }
+}
+.noProductContainer {
+    display: flex;
+    justify-content: center;
+    padding: rem-calc(20);
+}

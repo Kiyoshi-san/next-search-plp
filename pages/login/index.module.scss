@@ -1,0 +1,27 @@
+@import "../../styles/foundation.scss";
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    form {
+        width: 60%;
+        padding-top: rem-calc(100);
+        input, button {
+            width: 100%;
+            padding: rem-calc(10);
+            margin-top: rem-calc(20);
+            border-radius: 5px;
+        }
+        button {
+            background: map-get($foundation-palette, primary);
+            color: map-get($foundation-palette, dark);
+            font-size: rem-calc(20);
+            cursor: pointer;
+        }
+    }
+    @media(max-width: map-get($breakpoints, medium)) {
+        form {
+            width: 90%;
+        }
+    }
+}

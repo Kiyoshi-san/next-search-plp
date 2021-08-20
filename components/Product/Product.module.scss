@@ -1,0 +1,45 @@
+@import "../../styles/foundation.scss";
+
+.productCardContainer {
+  border: 0.1rem map-get($foundation-palette, cardBorder) solid;
+  background: map-get($foundation-palette, cardBg);
+  border-radius: 10px;
+  margin: 1rem;
+  padding: rem-calc(20);
+  width: rem-calc(250);
+  .wishContainer {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    i {
+      font-size: rem-calc(20);
+      color: map-get($foundation-palette, darkGrey);
+    }
+    &.wished {
+      i {
+        color: map-get($foundation-palette, red);
+      }
+    }
+  }
+  .productImgBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem-calc(20);
+    img {
+      height: rem-calc(140);
+      max-width: rem-calc(140);
+    }
+  }
+  .ratingsContainer {
+    text-align: center;
+    margin: rem-calc(10) 0;
+    i {
+      color: map-get($foundation-palette, primary);
+      font-size: rem-calc(20);
+      margin-right: rem-calc(8);
+    }
+  }
+}
+.price {
+  font-size: 2rem;
+}

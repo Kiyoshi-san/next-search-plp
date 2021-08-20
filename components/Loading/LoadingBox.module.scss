@@ -1,0 +1,15 @@
+@import "../../styles/foundation.scss";
+
+.loading {
+  display: block;
+  text-align: center;
+  width: 65%;
+  padding-top: rem-calc(20);
+  i {
+    margin-right: rem-calc(20);
+    font-size: rem-calc(30);
+  }
+  span {
+    font-size: rem-calc(30);
+  }
+}
