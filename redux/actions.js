@@ -1,3 +1,4 @@
+import { server } from '../config';
 import {
     USER_SESSION,
     SHOW_MENU_MOBILE,
@@ -22,7 +23,7 @@ export const listCategories = () => async (dispatch) => {
         type: CATEGORY_LIST_REQUEST,
     });
     try {
-        const data = await fetch(`/api/categories`, {
+        const data = await fetch(`${server}/api/categories`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
@@ -43,7 +44,7 @@ export const listProducts = ({
         type: PRODUCT_LIST_REQUEST
     });
     try {
-        const data = await fetch(`/api/products?search=${search}`, {
+        const data = await fetch(`${server}/api/products?search=${search}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
